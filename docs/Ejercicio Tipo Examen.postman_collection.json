@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "d558e815-aae2-4284-8118-3ab43b263e35",
+		"name": "Ejercicio Tipo Examen",
+		"description": "Esta es una coleccion donde estara las pruebas del api una por una",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/personas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"personas"
+					]
+				},
+				"description": "Get de toda la coleccion"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/personas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Orlando J Betancourth 2",
+							"type": "text"
+						},
+						{
+							"key": "correo",
+							"value": "obetancourthunicah@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "000000000",
+							"type": "text"
+						},
+						{
+							"key": "nota",
+							"value": "Ejemplo de Persona en ejercicio tipo examen",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/personas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"personas"
+					]
+				},
+				"description": "Guarda una nueva persona"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/personas/104f7e91-f8ce-450a-b592-101176fc2e9a",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "correo",
+							"value": "obetancourthunicah@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "1111111111",
+							"type": "text"
+						},
+						{
+							"key": "notas",
+							"value": "Ejemplo de Persona en ejercicio tipo examen put",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/personas/104f7e91-f8ce-450a-b592-101176fc2e9a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"personas",
+						"104f7e91-f8ce-450a-b592-101176fc2e9a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/personas/104f7e91-f8ce-450a-b592-101176fc2e9a",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/personas/104f7e91-f8ce-450a-b592-101176fc2e9a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"personas",
+						"104f7e91-f8ce-450a-b592-101176fc2e9a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/personas/b50880d7-5608-4cc3-aceb-7f85aa59a34e",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/personas/b50880d7-5608-4cc3-aceb-7f85aa59a34e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"personas",
+						"b50880d7-5608-4cc3-aceb-7f85aa59a34e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

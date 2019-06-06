@@ -27,14 +27,25 @@ personaCollection.push(
     )
 );
 
+router.get('/:id', (req, res, next) => {
+  if  (!req.params.id) return next();
+  var id = req.params.id;
+  var persona = personaCollection.filter((e, i) => {
+    return (e.id === id);
+  });//filter
+
+  if (persona.length > 0) {
+    res.status(200).json(persona[0]);
+  } else {
+    res.status(404).json({});
+  }
+
+})// get one by Id
 router.get('/', (req, res, next)=>{
   // obtiene la coleccion de personas
   res.status(200).json(personaCollection);
 });// get
 
-router.get('/:id', (req, res, next) => {
-  res.status(403).json({ msg: "not implemented" });
-})// get one by Id
 
 
 router.post('/', (req, res, next)=>{
