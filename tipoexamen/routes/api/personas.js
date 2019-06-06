@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+// esto es nuevo es para generar un identificador unico
+var uuid = require('uuid/v4');
 
 var personaCollection = [];
 
@@ -11,8 +13,23 @@ var personaStruct = {
   nota:''
 }
 
+personaCollection.push(
+  Object.assign(
+    {},
+    personaStruct,
+    {
+      id:uuid(),
+      nombre:'Orlando J Betancourth',
+      correo:'obetancourthunicah@gmail.com',
+      telefono: 'jajajaja',
+      notas:'Ejemplo de Persona en ejercicio tipo examen'
+    }
+    )
+);
+
 router.get('/', (req, res, next)=>{
-  res.status(403).json({msg:"not implemented"});
+  // obtiene la coleccion de personas
+  res.status(200).json(personaCollection);
 });// get
 
 router.get('/:id', (req, res, next) => {
@@ -21,7 +38,14 @@ router.get('/:id', (req, res, next) => {
 
 
 router.post('/', (req, res, next)=>{
-  res.status(403).json({ msg: "not implemented" });
+  var newPersona = Object.assign(
+    {},
+    personaStruct,
+    {id:uuid()},
+    req.body
+  );
+  personaCollection.push(newPersona);
+  res.status(200).json(newPersona);
 }); //post
 
 
